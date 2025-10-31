@@ -1,4 +1,4 @@
-# Guia de Execução
+# 📙 Guia de Execução
 
 Documento contendo instruções para a execução de cada etapa da avaliação, descrição de testes e exemplos de usos. <br>
 O repositório está estruturado em 3 diretoŕios referentes às suas respectivas etapas; cada um deles está configurado com o necessário para as implementações.
@@ -39,3 +39,46 @@ Caso deseje personalizar os testes, os parâmetros estão devidamente sinalizado
     - intercalar frente e verso em uma fila de uma impressora.
 - **Implementação 2 - Contar a frequência de palavras**
     - implementar uma nuvem de palavras em um site.
+
+## 🟦 Etapa 3 - TypeScript
+
+De acordo com as instruções, a linguagem utilizada foi **TypeScript**. Este diretório contém a seguinte estrutura:
+
+- **package.json** e **tsconfig.json**, especificando configurações do TypeScript e Node.js;
+- **utils.ts**, que implementa funções utilitárias (filtrar usuários adultos e embaralhar array);
+- **main.ts**, usado para executar as funções utilitárias;
+- **cli-cadastrar-produto.ts**, interface de linha de comando para cadastro de produtos;
+- **modelos/modelos.ts**, contendo as interfaces ```Usuario``` e ```Produto```;
+- **servicos/gerenciarProdutos.ts**, classe ```GerenciarProdutos``` para gerenciar produtos;
+- **banco/dados.ts**, dados estáticos de usuários e produtos.
+
+### Executando o Projeto
+
+Para executar a Etapa 3, navegue até o diretório e execute:
+
+```bash
+cd Etapa-3
+npm install
+```
+
+**Executar funções utilitárias:**
+```bash
+npx run start
+```
+
+**Executar CLI de cadastro de produtos:**
+```bash
+npm run cli
+```
+
+### Exemplos de uso
+
+- **Implementação 1 - Filtrar usuários adultos**
+    - sistema de votação online que permite apenas maiores de idade;
+    - controle de acesso a conteúdo restrito.
+- **Implementação 2 - Embaralhar array genérico**
+    - randomizar ordem de perguntas em um quiz;
+    - sortear ordem de apresentações em eventos.
+- **Implementação 3 - Sistema de cadastro de produtos**
+    - gerenciar catálogo de produtos em e-commerce;
+    - sistema de inventário para lojas.
