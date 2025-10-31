@@ -1,73 +1,84 @@
-# Avaliação para Candidatos a Estágio - Desenvolvedor TypeScript
+# 📙 Guia de Execução
 
-<img width="2000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/e645667c-a5a4-4045-9934-a8f02dc7a3f9" />
+Documento contendo instruções para a execução de cada etapa da avaliação, descrição de testes e exemplos de usos. <br>
+O repositório está estruturado em 3 diretoŕios referentes às suas respectivas etapas; cada um deles está configurado com o necessário para as implementações.
 
-Bem-vindo(a)! Que bom que você tem interesse em se juntar a equipe de desenvolvimento da Comigo!
+## 🧩 Etapa 1 - Resolução de Problemas (com Python)
 
-Este repositório contém o desafio para candidatos à vaga de estágio em desenvolvimento. O objetivo é avaliar seu raciocínio lógico, capacidade de resolução de problemas, conhecimento em programação e evolução no uso de tecnologias.
+A linguagem escolhida para esta etapa foi Python, por sua praticidade. Esse diretório contém dois arquivos:
+- **utils.py**, o qual implementa as funções requisitadas;
+- **main.py**, usado para executar essas funções.
 
-## Como funciona
+o arquivo **main.py** apresenta 3 chamadas de funções pré definidas para cada implementação (1, 2 e desafio). Caso deseje personalizar os testes, os parâmetros estão devidamente sinalizados pelo comentário ```--- Parâmetros ---```.
 
-O desafio é dividido em etapas de dificuldade crescente. Siga as instruções de cada etapa e envie suas soluções conforme orientado.
+### Exemplos de uso
 
-Esse desafio deve ser realizado até onde você conseguir. É interessante que tente resolver com o mínimo auxílio de IA possível. Mas sinta-se à vontade para pesquisar na internet sobre conteúdos que o auxiliem, mas evite plágio!
+- **Implementação 1 - Soma de inteiros**
+    - Sub-total do valor de uma nota fiscal
+    - Calcular a soma para uso em cálculos de média
+    - Somar o valor total de vendas de uma loja
+- **Implementação 2 - Inversão de um array**
+    - Inverter a ordem de resultados de busca (A-Z / Z-A)
+- **Desafio - Transposição de n elementos**
+    - Mover pessoas do início para o fim de uma fila
 
-Ao final, a entrega deve conter os códigos produzidos e um README.md explicando os códigos produzidos em cada etapa de maneira sucinta.
+## 🟨 Etapa 2 - JavaScript
 
----
+De acordo com as instruções, a linguagem utilizada foi **JavaScript**. Este diretório contém 4 arquivos:
 
-## Etapa 1: Resolução de Problemas (Lógica de Programação)
+- **package.json** e **package-lock.json**, especificando o necessário para o funcionamento do Node.js no diretório
+- **utils.js**, o qual implementa as funções requisitadas;
+- **main.js**, usado para executar essas funções e exibir os resultados.
 
-**Objetivo:** Resolver problemas simples utilizando uma linguagem de programação de sua preferência.
-Note que se for uma linguagem que precise ser compilada, liste o compilador e coloque no README do projeto um passo a passo de como gerar o código.
+O arquivo **main.js** apresenta 3 chamadas de funções pré-definidas para cada implementação (1 e 2).  
+Caso deseje personalizar os testes, os parâmetros estão devidamente sinalizados pelo comentário ```--- Parâmetros ---```.
 
-**Desafios etapa 1:**
-- Implemente uma função que receba um array de números e retorne a soma dos elementos.
+### Exemplos de uso
 
-- Implemente uma função que receba como parametro um array de números e retorne um array com todos os elementos invertidos.
+- **Implementação 1 - Encontrar valores pares**
+    - intercalar frente e verso em uma fila de uma impressora.
+- **Implementação 2 - Contar a frequência de palavras**
+    - implementar uma nuvem de palavras em um site.
 
-- **Desafio** Dado um array de números, crie uma função que receba esse array e um número n qualquer como parametros. O código deve pegar os n primeiros números do array e remove-los do array e concatenar na cauda(parte de traz do array). Trate quaisquer casos que achar necessário.
+## 🟦 Etapa 3 - TypeScript
 
-**Entrega:** Crie um arquivo `etapa1.<extensão>`, ou mais arquivos se desejar, com o código e as chamadas das funções passando os parametros. É interessante que para cada função haja pelo menos três chamadas retornando os valores corretos.
+De acordo com as instruções, a linguagem utilizada foi **TypeScript**. Este diretório contém a seguinte estrutura:
 
----
+- **package.json** e **tsconfig.json**, especificando configurações do TypeScript e Node.js;
+- **utils.ts**, que implementa funções utilitárias (filtrar usuários adultos e embaralhar array);
+- **main.ts**, usado para executar as funções utilitárias;
+- **cli-cadastrar-produto.ts**, interface de linha de comando para cadastro de produtos;
+- **modelos/modelos.ts**, contendo as interfaces ```Usuario``` e ```Produto```;
+- **servicos/gerenciarProdutos.ts**, classe ```GerenciarProdutos``` para gerenciar produtos;
+- **banco/dados.ts**, dados estáticos de usuários e produtos.
 
-## Etapa 2: JavaScript
+### Executando o Projeto
 
-**Objetivo:** Resolver problemas utilizando JavaScript.
+Para executar a Etapa 3, navegue até o diretório e execute:
 
-**Desafios sugeridos:**
-- Implemente uma função que filtre números pares de um array.
-- Implemente uma função que conte a frequência de cada palavra em uma frase.
+```bash
+cd Etapa-3
+npm install
+```
 
-**Entrega:** Crie um arquivo `etapa2.js`, ou mais caso achar necessário, com o código e exemplos de uso. É interessante que para cada função haja pelo menos três chamadas retornando os valores corretos.
+**Executar funções utilitárias:**
+```bash
+npx run start
+```
 
----
+**Executar CLI de cadastro de produtos:**
+```bash
+npm run cli
+```
 
-## Etapa 3: TypeScript
+### Exemplos de uso
 
-**Objetivo:** Resolver problemas utilizando TypeScript, aproveitando recursos como tipagem estática e interfaces.
-
-**Desafios sugeridos:**
-- Implemente uma interface para representar um usuário e uma função que receba um array de usuários e retorne apenas os maiores de idade.
-- Implemente uma função genérica que embaralhe os elementos de um array de qualquer tipo.
-- Implemente um sistema simples de cadastro de produtos, utilizando classes e interfaces.
-
-**Entrega:** Crie um arquivo `etapa3.ts`, ou mais caso achar necessário, com o código e exemplos de uso.  É interessante que para cada função haja pelo menos três chamadas retornando os valores corretos. Documente as classes utilizadas e descreva exemplos de teste para o sistema.
-
----
-
-## Dicas
-
-- Escreva exemplos de uso para cada função.
-- Utilize boas práticas de programação.
-- Se desejar, utilize testes automatizados.
-
----
-
-## Como enviar
-
-1. Faça um fork deste repositório.
-2. Crie uma branch com seu nome.
-3. Suba seus arquivos de solução utilizando commits.
-4. Abra um Pull Request para revisão.
+- **Implementação 1 - Filtrar usuários adultos**
+    - sistema de votação online que permite apenas maiores de idade;
+    - controle de acesso a conteúdo restrito.
+- **Implementação 2 - Embaralhar array genérico**
+    - randomizar ordem de perguntas em um quiz;
+    - sortear ordem de apresentações em eventos.
+- **Implementação 3 - Sistema de cadastro de produtos**
+    - gerenciar catálogo de produtos em e-commerce;
+    - sistema de inventário para lojas.

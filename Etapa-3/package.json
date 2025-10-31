@@ -1,0 +1,27 @@
+{
+  "name": "etapa-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm/transpile-only main.ts",
+    "cli": "node --loader ts-node/esm/transpile-only cli-cadastrar-produto.ts",
+    "dev": "node --import tsx main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "5.9.3"
+  },
+  "keywords": [],
+  "author": "mioli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "ts-node": "^10.9.2"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}
